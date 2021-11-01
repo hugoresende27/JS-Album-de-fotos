@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&display=swap');
+
+
+* 
+{
+    box-sizing: border-box;
+}
+/*alinhar conteudos ao centro*/
+body
+{
+    background-color: grey;
+    font-family: 'Lato','Verdana',sans-serif;
+    display: flex;          /*coloca tudo em linha*/
+   /* flex-direction: column; /*coloca tudo em coluna*/
+    align-items: center;    /*alinha horizontalmente*/
+    justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.conteudo
+{
+    display: flex;
+    /*flex-direction: column;/*coloca tudo numa coluna*/
+    width: 90vw;/*ecra de 0 a 100*/
+}
+
+.painel
+{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color:#fff;
+    cursor: pointer;
+    flex: 0.5;/*engorda as imagens*/
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.painel h3
+{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.painel.ativo
+{
+    flex: 5;
+}
+
+.painel.ativo h3
+{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px)        /*para ecras mais pequenos*/
+{
+    .conteudo
+    {
+        width: 100vw;
+    }
+    .painel:nth-of-type(4), /*conforme o tamanha do ecra, vai mostrar 3 ou 5 miniaturas da imagem, RESPONSIVO*/
+    .painel:nth-of-type(5)  /*media query*/
+    {
+        display: none;
+    }
+    footer 
+    {
+        display: none;
+    };
+}
+
+
+/*estilos do footer */
+
+footer{
+    font-size: 8pt;
+    color: chartreuse;
+    
+    text-align: center;
+    border-top: 1px dashed;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    bottom: 0;
+    
+    
+}
+
+footer a{
+   color: #edf5e1;  /*cor dos links a preto*/
+   text-decoration: none;     /*retira o sublinhado dos links*/
+  
+}
+
+footer a:hover{
+    color: red;
+}
+
+
