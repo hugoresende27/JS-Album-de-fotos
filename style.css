@@ -90,7 +90,7 @@ footer{
     border-top: 1px dashed;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     position: absolute;
-    bottom: 0;
+    bottom: 0.5rem;
     
     
 }
